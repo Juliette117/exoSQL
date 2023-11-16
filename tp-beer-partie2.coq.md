@@ -5,7 +5,7 @@
 SELECT NUMERO_TICKET, SUM(QUANTITE)  
 FROM ventes 
 GROUP BY NUMERO_TICKET 
-ORDER BY SUM(QUANTITE) DESC ;
+ORDER BY SUM(QUANTITE) DESC;
 ```
 
 ## 11 Listez chaque ticket pour lequel la quantité totale d’articles vendus est supérieure à 500. (Classer par quantité décroissante)
@@ -15,7 +15,7 @@ SELECT NUMERO_TICKET, SUM(QUANTITE)
 FROM ventes 
 GROUP BY NUMERO_TICKET 
 HAVING SUM(QUANTITE) >500 
-ORDER BY SUM(QUANTITE) DESC ;
+ORDER BY SUM(QUANTITE) DESC;
 
 ```
 
@@ -37,7 +37,7 @@ ORDER BY SUM(QUANTITE) DESC;
 SELECT ID_ARTICLE, NOM_TYPE, NOM_ARTICLE, VOLUME, TITRAGE 
 FROM article 
 INNER JOIN type ON article.id_type = type.id_type 
-WHERE NOM_TYPE = 'Trappiste' ;
+WHERE NOM_TYPE = 'Trappiste';
 ```
 
 ## 14 Listez les marques de bières du continent ‘Afrique’
@@ -46,7 +46,7 @@ WHERE NOM_TYPE = 'Trappiste' ;
  SELECT NOM_MARQUE 
  FROM marque 
  INNER JOIN continent 
- WHERE NOM_CONTINENT = 'Afrique' ;
+ WHERE NOM_CONTINENT = 'Afrique';
 
 ```
 
@@ -56,7 +56,7 @@ WHERE NOM_TYPE = 'Trappiste' ;
 SELECT NOM_ARTICLE 
 FROM article 
 INNER JOIN continent 
-wHERE NOM_CONTINENT = 'Afrique' ;
+wHERE NOM_CONTINENT = 'Afrique';
 
 ```
 
