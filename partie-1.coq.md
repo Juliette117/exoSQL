@@ -18,7 +18,7 @@ formateur de vous aider ou de vous donner le docker-compose.
 - article, continent, couleur, fabricant, marque, pays, ticket, type, ventes 
 
 ### Il y a des mauvaises pratiques dans ce modèle, lesquelles ?
-Le nom des colonnes en majuscule, 
+Le nom des tables en majuscule, 
 
 
 ## Exercices
