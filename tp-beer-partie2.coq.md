@@ -2,40 +2,61 @@
 
 ```mysql
 
-SELECT NUMERO_TICKET, SUM(QUANTITE)  FROM ventes GROUP BY NUMERO_TICKET ORDER BY SUM(QUANTITE) DESC ;
+SELECT NUMERO_TICKET, SUM(QUANTITE)  
+FROM ventes 
+GROUP BY NUMERO_TICKET 
+ORDER BY SUM(QUANTITE) DESC ;
 ```
 
 ## 11 Listez chaque ticket pour lequel la quantité totale d’articles vendus est supérieure à 500. (Classer par quantité décroissante)
 
 ```mysql
-SELECT NUMERO_TICKET, SUM(QUANTITE) FROM ventes group by NUMERO_TICKET HAVING SUM(QUANTITE) >500 ORDER BY SUM(QUANTITE) DESC ;
+SELECT NUMERO_TICKET, SUM(QUANTITE) 
+FROM ventes 
+GROUP BY NUMERO_TICKET 
+HAVING SUM(QUANTITE) >500 
+ORDER BY SUM(QUANTITE) DESC ;
 
 ```
 
 ## 12 Listez chaque ticket pour lequel la quantité totale d’articles vendus est supérieure à 500. On exclura du total, les ventes ayant une quantité supérieure à 50 (classer par quantité décroissante)
 
 ```mysql
-SELECT NUMERO_TICKET, SUM(QUANTITE) FROM ventes  WHERE QUANTITE < 50 group by NUMERO_TICKET HAVING SUM(QUANTITE) > 500 ORDER BY SUM(QUANTITE) DESC;
+SELECT NUMERO_TICKET, SUM(QUANTITE) 
+FROM ventes  
+WHERE QUANTITE < 50 
+GROUP BY NUMERO_TICKET 
+HAVING SUM(QUANTITE) > 500 
+ORDER BY SUM(QUANTITE) DESC;
 
 ```
 
 ## 13 Listez les bières de type ‘Trappiste’. (id, nom de la bière, volume et titrage)
 
 ```mysql
-SELECT ID_ARTICLE, NOM_TYPE, NOM_ARTICLE, VOLUME, TITRAGE FROM article INNER JOIN type ON article.id_type = type.id_type WHERE NOM_TYPE = 'Trappiste' ;
+SELECT ID_ARTICLE, NOM_TYPE, NOM_ARTICLE, VOLUME, TITRAGE 
+FROM article 
+INNER JOIN type ON article.id_type = type.id_type 
+WHERE NOM_TYPE = 'Trappiste' ;
 ```
 
 ## 14 Listez les marques de bières du continent ‘Afrique’
 
 ```mysql
- SELECT NOM_MARQUE FROM marque INNER JOIN continent WHERE NOM_CONTINENT = 'Afrique' ;
+ SELECT NOM_MARQUE 
+ FROM marque 
+ INNER JOIN continent 
+ WHERE NOM_CONTINENT = 'Afrique' ;
 
 ```
 
 ## 15 Lister les bières du continent ‘Afrique’
 
 ```mysql
-SELECT NOM_ARTICLE FROM article INNER JOIN continent WHERE NOM_CONTINENT = 'Afrique' ;
+SELECT NOM_ARTICLE 
+FROM article 
+INNER JOIN continent 
+wHERE NOM_CONTINENT = 'Afrique' ;
 
 ```
 
