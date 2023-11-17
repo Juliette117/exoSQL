@@ -63,6 +63,11 @@ wHERE NOM_CONTINENT = 'Afrique';
 ## 16. Lister les tickets (année, numéro de ticket, montant total payé). En sachant que le prix de vente est égal au prix d’achat augmenté de 15%.
 
 ```mysql
+SELECT ticket.NUMERO_TICKET, ticket.ANNEE, SUM(ventes.QUANTITE*1.5) 
+FROM ticket 
+INNER JOIN ventes USING (ANNEE, NUMERO_TICKET) 
+INNER JOIN article USING (PRIX_ACHAT, ID_ARTICLE) 
+GROUP BY ticket.NUMERO_TICKET, ticket.ANNEE;
 
 ```
 
